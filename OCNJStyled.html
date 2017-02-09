@@ -25,16 +25,10 @@
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: 39.2776, lng: -74.5746},
-          zoom: 8
-        });
-      }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6n2mGnq3i_e52ZhX8eMMedjHiS514nrk&callback=initMap"
-    async defer></script>
-  </body>
-</html>
-
-[
+          zoom: 10,
+          
+          styles:
+          [
   {
     "elementType": "geometry",
     "stylers": [
@@ -303,3 +297,10 @@
     ]
   }
 ]
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6n2mGnq3i_e52ZhX8eMMedjHiS514nrk&callback=initMap"
+    async defer></script>
+  </body>
+</html>
