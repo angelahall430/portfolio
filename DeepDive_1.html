@@ -299,6 +299,31 @@
 ]
         });
       }
+      var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">The Halls</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>The Halls</b>, Only two blocks from the beach this home is perfect walking distance for a day in the sand.</p>'+
+            '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+            'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+            '(last visited June 22, 2009).</p>'+
+            '</div>'+
+            '</div>';
+
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+
+        var marker = new google.maps.Marker({
+          position: 3404 Asbury Avenue
+          map: map,
+          title: 'The Halls Beach Home'
+        });
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+      }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6n2mGnq3i_e52ZhX8eMMedjHiS514nrk&callback=initMap"
     async defer></script>
