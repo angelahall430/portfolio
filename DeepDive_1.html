@@ -24,8 +24,14 @@
       var map;
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 39.532215, lng: -75.040472},
-          zoom: 11, 
+          var audubon = {lat: 39.889486, lng: -75.068001},
+          zoom: 10,
+          center: audubon
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
           
           styles:
           [
@@ -298,15 +304,7 @@
   }
 ]
         });
-      
-
-  var marker = new google.maps.Marker({
-    position: {lat: 39.532215, lng: 75.040472},
-    map: map,
-    title: 'The Halls Beach House'
-  });
-  marker.setMap(map);
-}
+      }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6n2mGnq3i_e52ZhX8eMMedjHiS514nrk&callback=initMap"
     async defer></script>
